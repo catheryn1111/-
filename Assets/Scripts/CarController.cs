@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour
 {
-    [SerializeField] List<AxleInfo> axleInfos; // информация о каждой оси
-    [SerializeField] float maxMotorTorque; // максимальный крутящий момент
-    [SerializeField] float maxSteeringAngle; // максимальный угол поворота колес
+    [SerializeField] List<AxleInfo> axleInfos; // ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГї Г® ГЄГ Г¦Г¤Г®Г© Г®Г±ГЁ
+    [SerializeField] float maxMotorTorque; // Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г»Г© ГЄГ°ГіГІГїГ№ГЁГ© Г¬Г®Г¬ГҐГ­ГІ
+    [SerializeField] float maxSteeringAngle; // Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г»Г© ГіГЈГ®Г« ГЇГ®ГўГ®Г°Г®ГІГ  ГЄГ®Г«ГҐГ±
     [SerializeField] Joystick joystick;
     bool isBreak;
+    // bool
     public void ApplyLocalPositionToVisuals(WheelCollider collider)
     {
         if (collider.transform.childCount == 0)
@@ -69,6 +70,6 @@ public class AxleInfo
 {
     public WheelCollider leftWheel;
     public WheelCollider rightWheel;
-    public bool motor; // присоединено ли колесо к мотору?
-    public bool steering; // поворачивает ли это колесо?
+    public bool motor; // ГЇГ°ГЁГ±Г®ГҐГ¤ГЁГ­ГҐГ­Г® Г«ГЁ ГЄГ®Г«ГҐГ±Г® ГЄ Г¬Г®ГІГ®Г°Гі?
+    public bool steering; // ГЇГ®ГўГ®Г°Г Г·ГЁГўГ ГҐГІ Г«ГЁ ГЅГІГ® ГЄГ®Г«ГҐГ±Г®?
 }
